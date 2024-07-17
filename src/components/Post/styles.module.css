@@ -75,16 +75,16 @@
       margin-top: 1rem;
     }
 
-    &:focus-within {
+    /* &:focus-within {
       footer {
         visibility: visible;
         max-height: none;
       }
-    }
+    } */
 
     footer {
-      visibility: hidden;
-      max-height: 0;
+      /* visibility: hidden; */
+      /* max-height: 0; */
 
       
       button[type=submit] {
