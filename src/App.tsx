@@ -3,15 +3,15 @@ import styles from "./app.module.css"
 
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
-import { Post } from "./components/Post";
+import { Post, PostTypes } from "./components/Post";
 
 
 
-const posts = [
+const posts: PostTypes[] = [
   {
     id: 1,
     author: {
-      avatarUrl: 'https://github.com/viitones.png',
+      avatarURL: 'https://github.com/viitones.png',
       name: 'Victor Hugo',
       role: 'Web Developer'
     },
@@ -26,7 +26,7 @@ const posts = [
   {
     id: 2,
     author: {
-      avatarUrl: 'https://github.com/rocketseat-education.png',
+      avatarURL: 'https://github.com/rocketseat-education.png',
       name: 'RocketSeat',
       role: 'Education @RocketSeat'
     },
@@ -54,9 +54,7 @@ export function App() {
               return (
                 <Post 
                   key={post.id}
-                  author={post.author}
-                  content={post.content}
-                  publishedAt={post.publishedAt}
+                  post={post}
                 />
               )
             })}
